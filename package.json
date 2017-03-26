@@ -1,0 +1,30 @@
+{
+  "name": "scroller",
+  "version": "0.0.1",
+  "description": "Accelerated panning and zooming for HTML and Canvas",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/R6Stats/scroller.git"
+  },
+  "keywords": [
+    "Scrolling",
+    "Scroll",
+    "Scroller",
+    "Touch"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/R6Stats/scroller/issues"
+  },
+  "homepage": "https://github.com/R6Stats/scroller",
+  "devDependencies": {
+    "mocha": "^1.20.1"
+  }
+}
