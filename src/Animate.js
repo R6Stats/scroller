@@ -22,7 +22,19 @@
  * rendering. This eases a lot of cases where it might be pretty complex to break down a state
  * based on the pure time difference.
  */
-(function(global) {
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['exports'], factory);
+    } else if (typeof exports === 'object') {
+        // CommonJS
+        factory(exports);
+    } else {
+        // Browser globals
+        factory((root.animate = {}));
+    }
+}(this, function (exports) {
+    var global = typeof window === 'undefined' ? this : window
 	var time = Date.now || function() {
 		return +new Date();
 	};
@@ -235,5 +247,4 @@
 			return id;
 		}
 	};
-})(this);
-
+}));

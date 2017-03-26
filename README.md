@@ -1,7 +1,7 @@
 Zynga Scroller
 ==============
 
-A pure logic component for scrolling/zooming. It is independent of any specific kind of rendering or event system. 
+A pure logic component for scrolling/zooming. It is independent of any specific kind of rendering or event system.
 
 The "demo" folder contains examples for usage with DOM and Canvas renderings which works both, on mouse and touch driven devices.
 
@@ -61,31 +61,31 @@ scrollerObj.setDimensions(1000, 1000, 3000, 3000);
 Public API
 ----------
 
-* Setup scroll object dimensions.  
+* Setup scroll object dimensions.
   `scrollerObj.setDimensions(clientWidth, clientHeight, contentWidth, contentHeight);`
-* Setup scroll object position (in relation to the document). Required for zooming to event position (mousewheel, touchmove).  
+* Setup scroll object position (in relation to the document). Required for zooming to event position (mousewheel, touchmove).
   `scrollerObj.setPosition(clientLeft, clientTop);`
-* Setup snap dimensions (only needed when `snapping` is enabled)  
+* Setup snap dimensions (only needed when `snapping` is enabled)
   `scrollerObj.setSnapSize(width, height);`
-* Setup pull-to-refresh. Height of the info region plus three callbacks which are executed on the different stages.  
+* Setup pull-to-refresh. Height of the info region plus three callbacks which are executed on the different stages.
   `scrollerObj.activatePullToRefresh(height, activate, deactivate, start);`
-* Stop pull-to-refresh session. Called inside the logic started by start callback for activatePullToRefresh call.  
+* Stop pull-to-refresh session. Called inside the logic started by start callback for activatePullToRefresh call.
   `scrollerObj.finishPullToRefresh();`
-* Get current scroll positions and zooming.  
+* Get current scroll positions and zooming.
   `scrollerObj.getValues() => { left, top, zoom }`
-* Zoom to a specific level. Origin defines the pixel position where zooming should centering to. Defaults to center of scrollerObj.  
+* Zoom to a specific level. Origin defines the pixel position where zooming should centering to. Defaults to center of scrollerObj.
   `scrollerObj.zoomTo(level, animate ? false, originLeft ? center, originTop ? center)`
-* Zoom by a given amount. Same as `zoomTo` but by a relative value.  
+* Zoom by a given amount. Same as `zoomTo` but by a relative value.
   `scrollerObj.zoomBy(factor, animate ? false, originLeft ? center, originTop ? center);`
-* Scroll to a specific position.  
+* Scroll to a specific position.
   `scrollerObj.scrollTo(left, top, animate ? false);`
-* Scroll by the given amount.  
+* Scroll by the given amount.
   `scrollerObj.scrollBy(leftOffset, topOffset, animate ? false);`
 
 Event API
 ---------
 
-This API part can be used to pass event data to the `scrollerObj` to react on user actions. 
+This API part can be used to pass event data to the `scrollerObj` to react on user actions.
 
 * `doMouseZoom(wheelDelta, timeStamp, pageX, pageY)`
 * `doTouchStart(touches, timeStamp)`
